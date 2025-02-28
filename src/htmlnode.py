@@ -17,3 +17,13 @@ class HTMLNode():
     
     def __repr__(self):
         return f"HTMLNode({self.tag}, {self.value}, {self.children}, {self.props})"
+    
+    def open_tag(self):
+        text = f"<{self.tag}"
+        if self.props != None:
+            text += super().props_to_html()
+        text += ">"
+        return text
+    
+    def close_tag(self):
+        return f"</{self.tag}>"
