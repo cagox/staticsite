@@ -1,4 +1,3 @@
-
 class HTMLNode():
     def __init__(self, tag=None, value=None, children=None, props=None):
         self.tag = tag
@@ -27,3 +26,5 @@ class HTMLNode():
     
     def close_tag(self):
         return f"</{self.tag}>"
+    
+

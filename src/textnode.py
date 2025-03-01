@@ -1,11 +1,11 @@
 from enum import Enum
 
 class TextType(Enum):
-    NORMAL = "normal"
+    TEXT = "text"
     BOLD = "bold"
     ITALIC = "italic"
     CODE = "code"
-    ANCHOR = "anchor"
+    LINK = "link"
     IMAGE = "image"
 
 class TextNode():
@@ -19,5 +19,4 @@ class TextNode():
     
     def __repr__(self):
         return f"TextNode({self.text}, {self.text_type.value}, {self.url})"
-
 
