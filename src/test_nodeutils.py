@@ -1,5 +1,5 @@
 import unittest
-from nodeuitils import *
+from nodeutils import *
 from htmlnode import *
 from textnode import *
 
@@ -20,3 +20,4 @@ class TestSplitNodesDelimiter(unittest.TestCase):
                     TextNode(" word", TextType.TEXT),
                 ]
         self.assertEqual(new_nodes, expected)
+
