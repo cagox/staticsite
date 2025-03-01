@@ -8,6 +8,7 @@ from nodeutils import (
     text_to_textnodes,
 )
 from textnode import TextNode, TextType
+from markdown_blocks import *
 
 
 class TestInlineMarkdown(unittest.TestCase):
@@ -141,7 +142,7 @@ class TestInlineMarkdown(unittest.TestCase):
             ],
             new_nodes,
         )
-        def test_text_to_textnodes(self):
+    def test_text_to_textnodes(self):
             nodes = text_to_textnodes(
                 "This is **text** with an _italic_ word and a `code block` and an ![image](https://i.imgur.com/zjjcJKZ.png) and a [link](https://boot.dev)"
             )
